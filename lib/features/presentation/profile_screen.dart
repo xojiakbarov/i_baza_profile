@@ -6,9 +6,11 @@ import 'package:hive/hive.dart';
 import 'package:i_baza_profile/features/presentation/pages/emty_page.dart';
 import 'package:i_baza_profile/features/presentation/pages/profile_edit_screen.dart';
 
+import '../../core/hive/stoage_repository.dart';
 import '../data/models/authentication_user.dart';
 
 class ProfileScreen extends StatefulWidget {
+
   const ProfileScreen({super.key});
 
   @override

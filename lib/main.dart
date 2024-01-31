@@ -12,7 +12,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   registerAdapters();
   /* await StorageRepository.getInstance(); */
-  await HiveService().initHive();
+  await initHive();
 
 
   runApp(const MyApp());
