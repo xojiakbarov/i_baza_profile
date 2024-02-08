@@ -5,19 +5,20 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hive/hive.dart';
 import 'package:i_baza_profile/features/presentation/pages/emty_page.dart';
 import 'package:i_baza_profile/features/presentation/pages/profile_edit_screen.dart';
+import 'package:i_baza_profile/features/presentation/profile_page.dart';
 
-import '../../core/hive/stoage_repository.dart';
-import '../data/models/authentication_user.dart';
+import '../../../core/hive/stoage_repository.dart';
+import '../../data/models/authentication_user.dart';
 
-class ProfileScreen extends StatefulWidget {
+class ProfileDate extends StatefulWidget {
 
-  const ProfileScreen({super.key});
+  const ProfileDate({super.key});
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<ProfileDate> createState() => _ProfileDateState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ProfileDateState extends State<ProfileDate> {
   File? avatar;
 
   @override
@@ -113,6 +114,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: 16,
                       ),
                       Text('Manzilingiz',
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
@@ -137,7 +139,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => EmtyPage()),
+                      MaterialPageRoute(builder: (context) => ProfileMainScreen()),
                     );
                   },
                   child: Center(

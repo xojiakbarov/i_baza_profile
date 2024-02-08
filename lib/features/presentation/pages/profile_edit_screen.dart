@@ -6,7 +6,7 @@ import 'package:hive/hive.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../data/models/authentication_user.dart';
-import '../profile_screen.dart';
+import 'profile_screen.dart';
 
 class ProfileEditScreen extends StatefulWidget {
   const ProfileEditScreen({super.key});
@@ -164,7 +164,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                 ),
               ),
             ]),
-            const SizedBox(height: 300),
+            const SizedBox(height: 250),
             ElevatedButton(
               onPressed: () {
                 setState(() {
@@ -177,7 +177,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                 });
 
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const ProfileScreen()));
+                    MaterialPageRoute(builder: (_) => const ProfileDate()));
               },
               child: Text('Saqlash', style: TextStyle(color: Colors.black)),
               style: ElevatedButton.styleFrom(

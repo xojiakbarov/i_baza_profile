@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:i_baza_profile/features/presentation/profile_page.dart';
 
 import 'assets/adapter/hive_type_adapter.dart';
 import 'core/hive/stoage_repository.dart';
-import 'features/presentation/profile_screen.dart';
 
 
 
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return const MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: ProfileScreen(),
+          home: ProfileMainScreen(),
         );
       },
     );
